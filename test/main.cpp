@@ -1,3 +1,5 @@
+// g++ ../source/wini.cpp ./main.cpp -o ./main
+
 #include "../source/wini.h"
 
 #include <iostream>
@@ -7,7 +9,7 @@ int main() {
 
 	wini::wini ini;
 
-	std::cout << (int)ini.load("./test/test.ini") << std::endl;
+	std::cout << (int)ini.load("./test.ini") << std::endl;
 	
 	std::cout << "---------------------" << std::endl;
 	std::cout << ini.get("sectiontest", "key1", false) << std::endl;
@@ -21,7 +23,7 @@ int main() {
 	ini.set("sectiontest", "key3", 114.514);
 	ini.set("sectiontest", "key4", "你好，世;#界！\"你好，世;#界！\"你好，世;#界！");
 
-	std::cout << (int)ini.save("./test/test2.ini") << std::endl;
+	std::cout << (int)ini.save("./test2.ini") << std::endl;
 
 	return 0;
 }
