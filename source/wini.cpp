@@ -266,3 +266,5 @@ void wini::wini::set(const std::string & section, const std::string & key, const
 void wini::wini::set(const std::string & section, const std::string & key, const std::string & val) {
 	getvalue(section, key, true)->setstring("\"" + val + "\"");
 }
+
+/* ---- */
